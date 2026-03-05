@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form - Keyboard Event</title>
+</head>
+<body>
+
+    <h2>Login Form</h2>
+
+    <form id="loginForm">
+        <label>Username:</label>
+        <input type="text" id="username" placeholder="Enter username">
+        <br><br>
+
+        <label>Password:</label>
+        <input type="password" id="password" placeholder="Enter password">
+        <br><br>
+
+        <button type="button" onclick="login()">Login</button>
+    </form>
+
+    <script>
+        // Function for login button
+        function login() {
+            console.log("Login attempt triggered");
+            alert("Submitting login form");
+        }
+
+        // Keydown event for Enter key
+        document.getElementById("username").addEventListener("keydown", function(e) {
+            
+            if (e.key === "Enter") {
+                console.log("Login attempt triggered");
+                alert("Submitting login form");
+            }
+
+        });
+    </script>
+
+</body>
+</html>
