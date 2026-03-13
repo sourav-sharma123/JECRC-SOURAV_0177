@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Using Modules</title>
+
+<style>
+body{
+font-family: Arial;
+padding:40px;
+}
+
+.container{
+border:1px solid #ccc;
+padding:20px;
+width:350px;
+border-radius:8px;
+}
+
+input{
+margin-top:10px;
+padding:6px;
+width:100%;
+}
+
+button{
+margin-top:10px;
+padding:6px 12px;
+}
+
+.result{
+margin-top:15px;
+font-weight:bold;
+color:blue;
+}
+</style>
+
+<script type="module">
+
+// Module code stored as a string
+const moduleCode = `
+export const PI = 3.14;
+
+export function add(a, b)
+{
+    return a + b;
+}
+
+export function subtract(a, b)
+{
+    return a - b;
+}
+
+export function multiply(a, b)
+{
+    return a * b;
+}
+
+export function divide(a, b)
+{
+    if (b == 0)
+    {
+        throw new Error("Cannot divide by zero");
+    }
+    return a / b;
+}
+`;
+
+// Create module dynamically
+const blob = new Blob([moduleCode], { type: "text/javascript" });
+const url = URL.createObjectURL(blob);
+
+// Import module
+import(url).then(module => {
+
+    window.calculate = function(){
+
+        const a = Number(document.getElementById("num1").value);
+        const b = Number(document.getElementById("num2").value);
+
+        let output = "";
+
+        output += "PI: " + module.PI + "<br>";
+        output += "Add: " + module.add(a,b) + "<br>";
+        output += "Subtract: " + module.subtract(a,b) + "<br>";
+        output += "Multiply: " + module.multiply(a,b) + "<br>";
+
+        try{
+            output += "Divide: " + module.divide(a,b);
+        }
+        catch(e){
+            output += "Divide: " + e.message;
+        }
+
+        document.getElementById("result").innerHTML = output;
+    }
+
+}).catch(error => {
+
+    document.getElementById("result").innerHTML =
+    "Error loading module: " + error;
+
+});
+
+</script>
+
+</head>
+
+<body>
+
+<h1>Using JavaScript Modules</h1>
+
+<div class="container">
+
+<input type="number" id="num1" placeholder="Enter first number">
+
+<input type="number" id="num2" placeholder="Enter second number">
+
+<button onclick="calculate()">Calculate</button>
+
+<div id="result" class="result"></div>
+
+</div>
+
+</body>
+</html>

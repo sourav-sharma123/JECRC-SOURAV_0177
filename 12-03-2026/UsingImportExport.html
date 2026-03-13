@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Using Modules</title>
+
+<style>
+body{
+font-family: Arial;
+padding:40px;
+}
+
+.container{
+border:1px solid #ccc;
+padding:20px;
+width:350px;
+border-radius:8px;
+}
+
+.result{
+margin-top:10px;
+font-weight:bold;
+color:blue;
+}
+</style>
+
+<script type="module">
+
+// Module code stored as a string
+const moduleCode = `
+export const PI = 3.14;
+
+export function add(a, b)
+{
+    return a + b;
+}
+
+export function subtract(a, b)
+{
+    return a - b;
+}
+
+export function multiply(a, b)
+{
+    return a * b;
+}
+
+export function divide(a, b)
+{
+    if (b == 0)
+    {
+        throw new Error("Cannot divide by zero");
+    }
+    return a / b;
+}
+`;
+
+// Create a module file dynamically using Blob
+const blob = new Blob([moduleCode], { type: "text/javascript" });
+const url = URL.createObjectURL(blob);
+
+// Import the module
+import(url).then(module => {
+
+    console.log("PI:", module.PI);
+    console.log("Add:", module.add(5,3));
+    console.log("Subtract:", module.subtract(10,4));
+    console.log("Multiply:", module.multiply(6,2));
+    console.log("Divide:", module.divide(10,2));
+
+}).catch(error => {
+
+    console.error("Error loading module:", error);
+
+});
+
+</script>
+
+</head>
+
+<body>
+
+<h1>Using JavaScript Modules</h1>
+
+<div class="container">
+<div id="output" class="result"></div>
+</div>
+
+<script>
+// Redirect console output to screen
+const outputDiv = document.getElementById("output");
+
+const originalLog = console.log;
+console.log = function(...args){
+    originalLog(...args);
+    outputDiv.innerHTML += args.join(" ") + "<br>";
+};
+
+const originalError = console.error;
+console.error = function(...args){
+    originalError(...args);
+    outputDiv.innerHTML += "<span style='color:red'>" + args.join(" ") + "</span><br>";
+};
+</script>
+
+</body>
+</html>
