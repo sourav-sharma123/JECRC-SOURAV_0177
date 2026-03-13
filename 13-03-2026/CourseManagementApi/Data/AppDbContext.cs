@@ -1,0 +1,36 @@
+// using Microsoft.EntityFrameworkCore;
+// using CourseManagementAPI.Models;
+
+// namespace CourseManagementAPI.Data
+// {
+//     public class AppDbContext : DbContext
+//     {
+//         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+//         {
+//         }
+
+//         public DbSet<Course> Courses { get; set; }
+
+//         public DbSet<Enrollment> Enrollments { get; set; }
+//     }
+// }
+
+
+
+using Microsoft.EntityFrameworkCore;
+using CourseManagementApi.Models;
+
+namespace CourseManagementApi.Data
+{
+    public class AppDbContext : DbContext
+    {
+        public AppDbContext(DbContextOptions<AppDbContext> options) 
+            : base(options)
+        {
+        }
+
+        public DbSet<Course> Courses { get; set; }
+
+        public DbSet<Enrollment> Enrollments { get; set; }
+    }
+}

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Course Management</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#f4f4f4;
+padding:40px;
+}
+
+.container{
+width:900px;
+margin:auto;
+background:white;
+padding:20px;
+}
+
+input,button{
+padding:8px;
+margin:5px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+th,td{
+border:1px solid #ccc;
+padding:10px;
+text-align:center;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Course Management System</h2>
+
+<h3>Add Course</h3>
+
+<input id="name" placeholder="Course Name">
+<input id="dept" placeholder="Department ID">
+<input id="credits" placeholder="Credits">
+
+<button onclick="addCourse()">Add Course</button>
+
+<h3>Courses</h3>
+
+<table>
+
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Department</th>
+<th>Credits</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody id="courseBody"></tbody>
+
+</table>
+
+
+<h3>Enroll Student</h3>
+
+<input id="courseId" placeholder="Course ID">
+<input id="studentName" placeholder="Student Name">
+
+<button onclick="enrollStudent()">Enroll</button>
+
+<h3>Enrollments</h3>
+
+<table>
+
+<thead>
+<tr>
+<th>ID</th>
+<th>Course</th>
+<th>Student</th>
+<th>Date</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody id="enrollBody"></tbody>
+
+</table>
+
+</div>
+
+<script>
+
+const courseApi = "http://localhost:5257/api/course";
+const enrollApi = "http://localhost:5257/api/enrollment";
+
+
+// LOAD COURSES
+async function loadCourses(){
+
+const res = await fetch(courseApi);
+const data = await res.json();
+
+const body = document.getElementById("courseBody");
+body.innerHTML="";
+
+data.forEach(c=>{
+
+body.innerHTML += `
+<tr>
+<td>${c.courseId}</td>
+<td>${c.courseName}</td>
+<td>${c.departmentId}</td>
+<td>${c.credits}</td>
+
+<td>
+<button onclick="deleteCourse(${c.courseId})">Delete</button>
+</td>
+</tr>
+`;
+
+});
+
+}
+
+
+// ADD COURSE
+async function addCourse(){
+
+const name=document.getElementById("name").value;
+const dept=document.getElementById("dept").value;
+const credits=document.getElementById("credits").value;
+
+if(!name || !dept || !credits){
+alert("Fill all fields");
+return;
+}
+
+const course={
+courseName:name,
+departmentId:parseInt(dept),
+credits:parseInt(credits),
+seatsAvailable:true
+};
+
+await fetch(courseApi,{
+method:"POST",
+headers:{"Content-Type":"application/json"},
+body:JSON.stringify(course)
+});
+
+loadCourses();
+
+}
+
+
+// DELETE COURSE
+async function deleteCourse(id){
+
+await fetch(`${courseApi}/${id}`,{
+method:"DELETE"
+});
+
+loadCourses();
+
+}
+
+
+// ENROLL STUDENT
+async function enrollStudent(){
+
+const courseId=document.getElementById("courseId").value;
+const studentName=document.getElementById("studentName").value;
+
+if(!courseId || !studentName){
+alert("Enter course ID and student name");
+return;
+}
+
+const enrollment={
+courseId:parseInt(courseId),
+studentName:studentName
+};
+
+await fetch(`${enrollApi}/enroll`,{
+method:"POST",
+headers:{"Content-Type":"application/json"},
+body:JSON.stringify(enrollment)
+});
+
+loadEnrollments();
+
+}
+
+
+// LOAD ENROLLMENTS
+async function loadEnrollments(){
+
+const res = await fetch(enrollApi);
+const data = await res.json();
+
+const body=document.getElementById("enrollBody");
+body.innerHTML="";
+
+data.forEach(e=>{
+
+body.innerHTML += `
+<tr>
+
+<td>${e.enrollmentId}</td>
+<td>${e.courseId}</td>
+<td>${e.studentName}</td>
+<td>${new Date(e.enrollmentDate).toLocaleString()}</td>
+
+<td>
+<button onclick="dropCourse(${e.enrollmentId})">Drop</button>
+</td>
+
+</tr>
+`;
+
+});
+
+}
+
+
+// DROP COURSE
+async function dropCourse(id){
+
+await fetch(`${enrollApi}/${id}`,{
+method:"DELETE"
+});
+
+loadEnrollments();
+
+}
+
+
+// INITIAL LOAD
+loadCourses();
+loadEnrollments();
+
+</script>
+
+</body>
+</html>
