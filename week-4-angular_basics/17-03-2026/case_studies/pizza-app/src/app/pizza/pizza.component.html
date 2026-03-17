@@ -1,0 +1,25 @@
+<div class="container">
+
+  <h2>🍕 Pizza Order App</h2>
+
+  <div class="form">
+    <label>Pizza Name:</label>
+    <input type="text" [(ngModel)]="pizzaName" placeholder="Enter pizza name">
+
+    <label>Quantity:</label>
+    <input type="number" [(ngModel)]="quantity" placeholder="Enter quantity">
+
+    <label>Delivery Address:</label>
+    <textarea [(ngModel)]="address" placeholder="Enter address"></textarea>
+  </div>
+
+  <div class="summary" *ngIf="pizzaName || quantity || address">
+    <h3>🧾 Order Summary</h3>
+
+    <p><strong>Pizza:</strong> {{pizzaName}}</p>
+    <p><strong>Quantity:</strong> {{quantity}}</p>
+    <p><strong>Address:</strong> {{address}}</p>
+
+  </div>
+
+</div>
