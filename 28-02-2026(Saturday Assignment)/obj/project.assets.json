@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\CRT\\Capgemini Training\\28-02-2026\\28-02-2026.csproj",
+      "projectUniqueName": "D:\\CRT\\Capgemini Training\\28-02-2026(Saturday Assignment)\\28-02-2026.csproj",
       "projectName": "28-02-2026",
-      "projectPath": "D:\\CRT\\Capgemini Training\\28-02-2026\\28-02-2026.csproj",
+      "projectPath": "D:\\CRT\\Capgemini Training\\28-02-2026(Saturday Assignment)\\28-02-2026.csproj",
       "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-      "outputPath": "D:\\CRT\\Capgemini Training\\28-02-2026\\obj\\",
+      "outputPath": "D:\\CRT\\Capgemini Training\\28-02-2026(Saturday Assignment)\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config"

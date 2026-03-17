@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JwtRoleAuthAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d59fe9abba4550cbacbefd618163afd6e9a8294d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+11d721d1051e997ee5ee2425d6c4ecf7347fbccf")]
 [assembly: System.Reflection.AssemblyProductAttribute("JwtRoleAuthAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JwtRoleAuthAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

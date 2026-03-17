@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\CRT\\Day-9\\EmployeeAPI\\EmployeeAPI.csproj": {}
+    "D:\\CRT\\Capgemini Training\\27-02-2026\\EmployeeAPI\\EmployeeAPI.csproj": {}
   },
   "projects": {
-    "D:\\CRT\\Day-9\\EmployeeAPI\\EmployeeAPI.csproj": {
+    "D:\\CRT\\Capgemini Training\\27-02-2026\\EmployeeAPI\\EmployeeAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CRT\\Day-9\\EmployeeAPI\\EmployeeAPI.csproj",
+        "projectUniqueName": "D:\\CRT\\Capgemini Training\\27-02-2026\\EmployeeAPI\\EmployeeAPI.csproj",
         "projectName": "EmployeeAPI",
-        "projectPath": "D:\\CRT\\Day-9\\EmployeeAPI\\EmployeeAPI.csproj",
+        "projectPath": "D:\\CRT\\Capgemini Training\\27-02-2026\\EmployeeAPI\\EmployeeAPI.csproj",
         "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "D:\\CRT\\Day-9\\EmployeeAPI\\obj\\",
+        "outputPath": "D:\\CRT\\Capgemini Training\\27-02-2026\\EmployeeAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config"
