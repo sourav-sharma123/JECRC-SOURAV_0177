@@ -1,0 +1,30 @@
+.container {
+  width: 500px;
+  margin: auto;
+  text-align: center;
+  font-family: Arial;
+}
+
+select {
+  padding: 5px;
+  margin: 10px;
+}
+
+.box {
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  color: white;
+}
+
+.admin {
+  background-color: green;
+}
+
+.user {
+  background-color: blue;
+}
+
+.manager {
+  background-color: orange;
+}
