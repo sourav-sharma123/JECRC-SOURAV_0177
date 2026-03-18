@@ -1,0 +1,20 @@
+<div class="container">
+
+  <h2>🚫 Click Block Directive</h2>
+
+  <!-- Toggle Button -->
+  <button (click)="togglePermission()">
+    Toggle Permission ({{allowClick ? 'Allowed' : 'Blocked'}})
+  </button>
+
+  <br><br>
+
+  <!-- Action Button -->
+  <button 
+    [appClickBlock]="allowClick"
+    (click)="performAction()">
+    
+    Click Me
+  </button>
+
+</div>
