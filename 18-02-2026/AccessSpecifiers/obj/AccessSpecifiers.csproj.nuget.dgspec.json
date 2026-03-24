@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\CRT\\Day-3\\AccessSpecifiers\\AccessSpecifiers.csproj": {}
+    "D:\\CRT\\Capgemini Training\\18-02-2026\\AccessSpecifiers\\AccessSpecifiers.csproj": {}
   },
   "projects": {
-    "D:\\CRT\\Day-3\\AccessSpecifiers\\AccessSpecifiers.csproj": {
+    "D:\\CRT\\Capgemini Training\\18-02-2026\\AccessSpecifiers\\AccessSpecifiers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CRT\\Day-3\\AccessSpecifiers\\AccessSpecifiers.csproj",
+        "projectUniqueName": "D:\\CRT\\Capgemini Training\\18-02-2026\\AccessSpecifiers\\AccessSpecifiers.csproj",
         "projectName": "AccessSpecifiers",
-        "projectPath": "D:\\CRT\\Day-3\\AccessSpecifiers\\AccessSpecifiers.csproj",
+        "projectPath": "D:\\CRT\\Capgemini Training\\18-02-2026\\AccessSpecifiers\\AccessSpecifiers.csproj",
         "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "D:\\CRT\\Day-3\\AccessSpecifiers\\obj\\",
+        "outputPath": "D:\\CRT\\Capgemini Training\\18-02-2026\\AccessSpecifiers\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -1,23 +1,16 @@
-<h1>Product List</h1>
+<h2 class="title">Products</h2>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Price</th>
-    </tr>
-  </thead>
+<div class="product-grid">
+  <div class="card" *ngFor="let product of products">
 
-  <tbody>
-    <tr *ngFor="let product of products">
-      <td>{{ product.productID }}</td>
-      <td>
-        <a [routerLink]="['/product', product.productID]">
-          {{ product.name }}
-        </a>
-      </td>
-      <td>{{ product.price }}</td>
-    </tr>
-  </tbody>
-</table>
+    <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" />
+
+    <h3>{{ product.name }}</h3>
+    <p class="price">₹{{ product.price }}</p>
+
+    <button [routerLink]="['/product', product.productID]">
+      View Details
+    </button>
+
+  </div>
+</div>

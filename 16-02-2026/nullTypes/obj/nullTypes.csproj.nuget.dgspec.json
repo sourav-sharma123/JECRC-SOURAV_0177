@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\CRT\\Day-1\\nullTypes\\nullTypes.csproj": {}
+    "D:\\CRT\\Capgemini Training\\16-02-2026\\nullTypes\\nullTypes.csproj": {}
   },
   "projects": {
-    "D:\\CRT\\Day-1\\nullTypes\\nullTypes.csproj": {
+    "D:\\CRT\\Capgemini Training\\16-02-2026\\nullTypes\\nullTypes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CRT\\Day-1\\nullTypes\\nullTypes.csproj",
+        "projectUniqueName": "D:\\CRT\\Capgemini Training\\16-02-2026\\nullTypes\\nullTypes.csproj",
         "projectName": "nullTypes",
-        "projectPath": "D:\\CRT\\Day-1\\nullTypes\\nullTypes.csproj",
+        "projectPath": "D:\\CRT\\Capgemini Training\\16-02-2026\\nullTypes\\nullTypes.csproj",
         "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "D:\\CRT\\Day-1\\nullTypes\\obj\\",
+        "outputPath": "D:\\CRT\\Capgemini Training\\16-02-2026\\nullTypes\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config"

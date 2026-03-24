@@ -39,12 +39,21 @@ import { ProductService } from '../product.service';
   imports: [CommonModule],
   template: 
   `
-  <div class = "card" *ngIf="product">
-    <h2>{{product.name}}</h2>
-    <p>{{product.description}}</p>
-    <p>Price: {{product.price}}</p>
-  </div>  
-    `
+  <div class="detail-container" *ngIf="product">
+
+  <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" />
+
+  <div class="info">
+    <h2>{{ product.name }}</h2>
+    <p><b>ID:</b> {{ product.productID }}</p>
+    <p class="price">₹{{ product.price }}</p>
+
+    <button routerLink="/products">⬅ Back</button>
+  </div>
+
+</div>
+    `,
+    styleUrls: ['./product-detail.component.css']
 })
 export class ProductDetailComponent implements OnInit {
   product:any;
