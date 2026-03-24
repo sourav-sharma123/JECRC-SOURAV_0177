@@ -1,0 +1,17 @@
+<h2 class="section-title">Cart</h2>
+
+<div class="cart-container">
+  <div *ngFor="let item of cartService.cartItems; let i = index" class="cart-item">
+    
+    <div>
+      <h4>{{item.name}}</h4>
+      <p>₹{{item.price}} × {{item.quantity}}</p>
+    </div>
+
+    <button class="remove-btn" (click)="cartService.removeFromCart(i)">
+      Remove
+    </button>
+  </div>
+
+  <h3 class="total">Total: ₹{{ cartService.getTotal() }}</h3>
+</div>
