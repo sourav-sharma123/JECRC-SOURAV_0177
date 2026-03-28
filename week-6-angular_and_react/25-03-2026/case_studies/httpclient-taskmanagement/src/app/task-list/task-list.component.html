@@ -1,0 +1,23 @@
+<div class="grid">
+  <div class="card" *ngFor="let task of tasks">
+
+    <h3 [class.done]="task.completed">
+      {{ task.title }}
+    </h3>
+
+    <div class="status">
+      {{ task.completed ? '✅ Completed' : '⏳ Pending' }}
+    </div>
+
+    <div class="buttons">
+      <button (click)="toggleStatus(task)">
+        🔄 Toggle
+      </button>
+
+      <button class="delete" (click)="deleteTask(task.id!)">
+        ❌ Delete
+      </button>
+    </div>
+
+  </div>
+</div>
