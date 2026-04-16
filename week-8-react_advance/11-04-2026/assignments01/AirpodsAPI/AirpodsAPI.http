@@ -1,0 +1,6 @@
+@AirpodsAPI_HostAddress = http://localhost:5296
+
+GET {{AirpodsAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
