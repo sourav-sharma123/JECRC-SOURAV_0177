@@ -1,0 +1,17 @@
+<div [appTheme]="theme" class="container">
+
+  <h2>🎨 Theme Directive</h2>
+
+  <p>Current Theme: {{theme}}</p>
+
+  <button (click)="toggleTheme()">
+    Switch to {{ theme === 'light' ? 'Dark' : 'Light' }} Mode
+  </button>
+
+  <br><br>
+
+  <p>
+    This text will change based on theme!
+  </p>
+
+</div>

@@ -1,0 +1,52 @@
+<div class="container">
+
+  <h2>🏥 Doctor Appointment Booking</h2>
+
+  <div class="form">
+
+    <label>Patient Name:</label>
+    <input type="text" [(ngModel)]="patientName" placeholder="Enter name">
+
+    <label>Select Doctor:</label>
+    <select [(ngModel)]="doctor">
+      <option value="">-- Select Doctor --</option>
+      
+      <option>Dr. Mehta</option>
+      <option>Dr. Gupta</option>
+    </select>
+
+    <label>Appointment Date:</label>
+    <input type="date" [(ngModel)]="date" [min]="minDate">
+
+    <label>Consultation Type:</label>
+    <select [(ngModel)]="type" (change)="updateFee()">
+      <option value="">-- Select Type --</option>
+      <option value="Online">Online</option>
+      <option value="Offline">Offline</option>
+    </select>
+
+    <label>Symptoms:</label>
+    <textarea [(ngModel)]="symptoms"></textarea>
+
+  </div>
+
+  <!-- Summary -->
+  <div class="summary" *ngIf="patientName || doctor || date || type">
+    <h3>📋 Appointment Summary</h3>
+
+    <p><strong>Name:</strong> {{patientName}}</p>
+    <p><strong>Doctor:</strong> {{doctor}}</p>
+    <p><strong>Date:</strong> {{date}}</p>
+    <p><strong>Type:</strong> {{type}}</p>
+    <p><strong>Symptoms:</strong> {{symptoms}}</p>
+    <p><strong>Fee:</strong> ₹{{fee}}</p>
+
+    <button (click)="bookAppointment()">Book Appointment</button>
+  </div>
+
+  <!-- Message -->
+  <p *ngIf="message" class="message">
+    {{message}}
+  </p>
+
+</div>
