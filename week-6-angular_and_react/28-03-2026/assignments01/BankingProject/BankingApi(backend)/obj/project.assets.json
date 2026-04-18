@@ -2471,11 +2471,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\CRT\\Project\\BankingApi\\BankingApi.csproj",
+      "projectUniqueName": "D:\\CRT\\Capgemini Training\\week-6-angular_and_react\\28-03-2026\\assignments01\\BankingProject\\BankingApi(backend)\\BankingApi.csproj",
       "projectName": "BankingApi",
-      "projectPath": "D:\\CRT\\Project\\BankingApi\\BankingApi.csproj",
+      "projectPath": "D:\\CRT\\Capgemini Training\\week-6-angular_and_react\\28-03-2026\\assignments01\\BankingProject\\BankingApi(backend)\\BankingApi.csproj",
       "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-      "outputPath": "D:\\CRT\\Project\\BankingApi\\obj\\",
+      "outputPath": "D:\\CRT\\Capgemini Training\\week-6-angular_and_react\\28-03-2026\\assignments01\\BankingProject\\BankingApi(backend)\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -32,7 +32,7 @@ function Counter() {
             <div style={{ fontSize: '40px', margin: "10px" }}>
                 <h1>Counter App: {count}</h1>
             </div>
-            <div style={{ marginBottom: "20px" }}>
+            <div style={{ marginBottom: "20px" }}>  
                 < label >step:
                     <input
                         type="number"

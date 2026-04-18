@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "whVqPjGNy7I=",
+  "dgSpecHash": "rh2aZD2zTOE=",
   "success": true,
-  "projectFilePath": "D:\\CRT\\Project\\BankingApi\\BankingApi.csproj",
+  "projectFilePath": "D:\\CRT\\Capgemini Training\\week-6-angular_and_react\\28-03-2026\\assignments01\\BankingProject\\BankingApi(backend)\\BankingApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dell\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.2\\microsoft.aspnetcore.openapi.10.0.2.nupkg.sha512",
