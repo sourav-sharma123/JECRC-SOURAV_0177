@@ -1,0 +1,55 @@
+<div class="weather-card">
+  <div class="header-section">
+    <h1>Weather Finder</h1>
+    <p>Search weather by city name</p>
+  </div>
+
+  <div class="search-section">
+    <div class="input-group">
+      <input
+        type="text"
+        class="city-input"
+        placeholder="Enter city name..."
+        [(ngModel)]="cityName"
+        (input)="onSearch()"
+        data-test-id="app-input"
+      />
+
+      <button type="button" class="clear-btn" (click)="clearSearch()">
+        Clear
+      </button>
+    </div>
+  </div>
+
+  <div class="helper-text">
+    Try: Mumbai, Delhi, Jaipur, Bangalore, Chennai
+  </div>
+
+  <div
+    *ngIf="matchedWeather"
+    class="result-card"
+    data-test-id="weather-details"
+  >
+    <div class="city-badge">{{ matchedWeather.name }}</div>
+
+    <div class="temperature" data-test-id="output-temperature">
+      {{ matchedWeather.temperature }}
+    </div>
+
+    <div class="weather-row" data-test-id="output-wind">
+      Wind: {{ matchedWeather.wind }}
+    </div>
+
+    <div class="weather-row" data-test-id="output-humidity">
+      Humidity: {{ matchedWeather.humidity }}
+    </div>
+  </div>
+
+  <div
+    *ngIf="searched && !matchedWeather"
+    class="no-result"
+    data-test-id="no-results"
+  >
+    No Results Found
+  </div>
+</div>

@@ -1,0 +1,8 @@
+.page-wrapper {
+  min-height: 100vh;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 50%, #f8fafc 100%);
+}
